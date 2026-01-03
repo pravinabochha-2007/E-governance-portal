@@ -1,0 +1,95 @@
+# E-governance-portal
+E-Governance-Portal/
+│
+├── index.html
+├── services.html
+├── contact.html
+│
+├── CitizenPortal.java
+└── README.md
+<!DOCTYPE html>
+<html>
+<head>
+    <title>E-Governance Portal</title>
+</head>
+<body>
+    <h1>Welcome to E-Governance Portal</h1>
+    <p>This portal provides online government services to citizens.</p>
+
+    <h3>Available Services</h3>
+    <ul>
+        <li>Birth Certificate</li>
+        <li>Income Certificate</li>
+        <li>Voter ID Services</li>
+    </ul>
+
+    <a href="services.html">View Services</a><br><br>
+    <a href="contact.html">Contact Us</a>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Government Services</title>
+</head>
+<body>
+    <h1>Online Government Services</h1>
+
+    <p>Citizens can apply for services online:</p>
+
+    <ol>
+        <li>Birth Certificate Application</li>
+        <li>Income Certificate Application</li>
+        <li>Residence Certificate Application</li>
+    </ol>
+
+    <a href="index.html">Back to Home</a>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Us</title>
+</head>
+<body>
+    <h1>Contact Government Office</h1>
+
+    <p>Email: egov@india.gov</p>
+    <p>Phone: +91 9876543210</p>
+
+    <a href="index.html">Back to Home</a>
+</body>
+</html>
+import java.util.Scanner;
+
+public class CitizenPortal {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Welcome to E-Governance Portal");
+        System.out.println("1. Apply for Birth Certificate");
+        System.out.println("2. Apply for Income Certificate");
+        System.out.println("3. Apply for Voter ID");
+
+        System.out.print("Enter your choice: ");
+        int choice = sc.nextInt();
+
+        switch (choice) {
+            case 1:
+                System.out.println("Birth Certificate application submitted successfully.");
+                break;
+            case 2:
+                System.out.println("Income Certificate application submitted successfully.");
+                break;
+            case 3:
+                System.out.println("Voter ID application submitted successfully.");
+                break;
+            default:
+                System.out.println("Invalid choice.");
+        }
+
+        sc.close();
+    }
+}
